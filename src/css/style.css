@@ -9,17 +9,17 @@ html, body {
 .wrapper {
     height: 100%;
     width: 100;
-    display: flex;
+    display: flex; 
     flex-direction: column;
     overflow: hidden;
 }
 .user-container {
     background : #a9bdce;
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0.5rem;
+    flex: 1;  /* 비율 1:12:1*/
+    display: flex; /* lable 태그와 input 태그 정렬 */
+    justify-content: flex-start;   /* 왼쪽 정렬 */
+    align-items: center; /* 상하 정렬 */
+    padding: 0.5rem; 
 }
 .user-container label {
     font-size: 14px;
@@ -32,14 +32,14 @@ html, body {
 }
 
 .display-container {
-    flex: 12;
+    flex: 12; /* 비율 1:12:1*/
     background: #b2c7d9;
-    overflow-y: scroll;
+    overflow-y: scroll; /* 채팅이 많이 쌓이면 스크롤 */
 }
 .input-container {
-    flex: 1;
+    flex: 1; /* 비율 1:12:1*/
     display: flex;
-    justify-content: stretch;
+    justify-content: stretch; /* 처음 부터 끝까지 영역을 먹을 있도록 함 */
     align-items: stretch;
 }
 .input-container span {
@@ -59,20 +59,20 @@ html, body {
     background: #ffeb33;
     border: none;
     height: 100%;
-    border-radius: 3px;
+    border-radius: 3px; /* 모서리 둥글게 */
 }
 .chatting-list li {
     width: 90%;
     padding: 0.3rem;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
+    justify-content: flex-start; /* 왼쪽 부터 정렬 */
+    align-items: flex-end; /* 세로로 주는 속성 */
     margin-top: 0.5rem;
 }
 .profile {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center; /* 정중앙 위치 */
     justify-content: center;
 }
 .profile .user {
@@ -80,9 +80,9 @@ html, body {
     margin-bottom: 0.3rem;
 }
 
-.profile .image {
-    border-radius: 50%;
-    object-fit: cover;
+.profile .img {
+    border-radius: 50%; /* 이미지 둥글게 */
+    object-fit: cover; /* 이미지가 크기에 맞게  */
     width: 50px;
     height: 50px;
 }
@@ -100,7 +100,7 @@ html, body {
 
 .sent {
     flex-direction: row-reverse;
-    float: right;
+    float: right; /*오른쪽으로 붙을 수 있게*/
 }
 
 .sent .message {

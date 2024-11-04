@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; // js 엄격한 모드, 오류를 최대한 줄이기 위해 사용
 
 const socket = io();
 const nickname = document.querySelector('#nickname');
@@ -35,16 +35,17 @@ socket.on('chatting', (data) => {
 });
 
 function LiModel(name, msg, time) {
-    this.name = name;
+    this.name = name; // 초기화, 할당
     this.msg = msg;
     this.time = time;
 
+    // 여기서 값들에 접근해서 사용하기 위해
     this.makeLi = () => {
         const li = document.createElement('li');
         li.classList.add(nickname.value === this.name ? "sent" : "received");
         const dom = `<span class="profile">
                         <span class="user">${this.name}</span>
-                        <img class="img" src="https://placeimg.com/50/50/any" alt="any">
+                        <img class="img" src="https://picsum.photos/50/50/" alt="any" />
                     </span>
                     <span class="message">${this.msg}</span>
                     <span class="time">${this.time}</span>`;
